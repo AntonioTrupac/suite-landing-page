@@ -38,23 +38,24 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type='button'
         disabled={disabled}
         className={clsxm(
-          'inline-flex items-center rounded px-4 py-2 font-semibold',
+          'inline-flex items-center rounded-md py-[15px] px-[32px] text-lg font-bold',
           'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
           'shadow-sm',
           'transition-colors duration-75',
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
-              'bg-primary-500 text-white',
-              'border border-primary-600',
-              'hover:bg-primary-600 hover:text-white',
-              'active:bg-primary-500',
-              'disabled:bg-primary-400 disabled:hover:bg-primary-400',
+              'bg-landing-dark-blue tracking-[-0.18px] text-landing-cream-white',
+              'border border-landing-dark-blue',
+              'hover:border hover:border-landing-dark-blue hover:bg-landing-cream-white hover:text-landing-dark-blue ',
+              'hover:tracking-[-0.16px] hover:text-landing-dark-blue',
+              'active:bg-landing-dark-blue active:text-landing-cream-white',
+              'button-gradient disabled:bg-landing-dark-grey disabled:text-landing-cream-white',
             ],
             variant === 'outline' && [
-              'text-primary-500',
-              'border border-primary-500',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
+              'bg-landing-cream-white tracking-[-0.16px] text-landing-dark-blue',
+              'border border-landing-dark-blue',
+              'hover:bg-primary-50 hover:tracking-[-0.18px] active:bg-primary-100 disabled:bg-primary-100',
               isDarkBg &&
                 'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
             ],

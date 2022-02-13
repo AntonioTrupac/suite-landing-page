@@ -1,9 +1,10 @@
+@import 'components/button.scss';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* #region  /**=========== Primary Color =========== */
   /* !STARTERCONF Customize these variable, copy and paste from /styles/colors.css for list of colors */
   --tw-color-primary-50: 240 249 255;
   --tw-color-primary-100: 224 242 254;
@@ -70,11 +71,64 @@
     @apply font-primary text-base font-bold md:text-lg;
   }
 
-  body,
+  .heading-xl-bold {
+    @apply text-7xl font-bold leading-[78px];
+    letter-spacing: -1px;
+  }
+
+  .heading-xl-regular {
+    @apply text-7xl font-normal leading-[78px];
+    letter-spacing: -1px;
+  }
+
+  .heading-l-bold {
+    @apply text-5xl font-bold leading-[56px];
+    letter-spacing: -0.5px;
+  }
+
+  .heading-l-regular {
+    @apply text-5xl font-normal leading-[56px];
+    letter-spacing: -0.5px;
+  }
+
+  .heading-m {
+    @apply text-lg font-bold leading-[32px];
+    letter-spacing: -0.18px;
+  }
+
+  .heading-s {
+    @apply text-base leading-[26px];
+    letter-spacing: -2.5px;
+  }
+
+  .quote {
+    @apply text-xl font-normal leading-[35px];
+    letter-spacing: 0;
+  }
+
+  body {
+    @apply text-lg font-normal leading-[32px];
+    letter-spacing: 0;
+  }
+
+  .footer {
+    @apply text-[15px] font-normal leading-[32px];
+    letter-spacing: 0;
+  }
+
   .p {
     @apply font-primary text-sm md:text-base;
   }
   /* #endregion  /**======== Typography =========== */
+
+  .button-gradient {
+    background: linear-gradient(
+      135deg,
+      #a060ff 0%,
+      #cb30e3 49.21%,
+      #ffa84e 100%
+    );
+  }
 
   .layout {
     /* 1100px */

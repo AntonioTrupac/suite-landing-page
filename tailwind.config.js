@@ -33,6 +33,15 @@ module.exports = {
           900: withOpacityValue('--tw-color-primary-900'),
         },
         dark: '#222222',
+        landing: {
+          'dark-blue': '#172339',
+          'dark-grey': '#49566D',
+          cream: '#F3EDE7',
+          'cream-white': '#FAF8F6',
+          purple: '#A060FF',
+          pink: '#CB30E3',
+          orange: '#FFA84E',
+        },
       },
       keyframes: {
         flicker: {

@@ -1,0 +1,13 @@
+@layer components {
+  .button-gradient {
+    background: none;
+    &:hover {
+      background: linear-gradient(
+        135deg,
+        #a060ff 0%,
+        #cb30e3 49.21%,
+        #ffa84e 100%
+      );
+    }
+  }
+}
