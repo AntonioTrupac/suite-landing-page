@@ -1,6 +1,7 @@
 @layer components {
   .button-gradient {
     background: none;
+    transition: 300ms ease-in-out;
     &:hover {
       background: linear-gradient(
         135deg,
@@ -8,6 +9,7 @@
         #cb30e3 49.21%,
         #ffa84e 100%
       );
+      //scale: 1.1;
     }
   }
 }

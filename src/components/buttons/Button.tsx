@@ -5,15 +5,11 @@ import clsxm from '@/lib/clsxm';
 
 enum ButtonVariant {
   'primary',
-  'outline',
-  'ghost',
-  'light',
-  'dark',
+  'secondary',
 }
 
 type ButtonProps = {
   isLoading?: boolean;
-  isDarkBg?: boolean;
   variant?: keyof typeof ButtonVariant;
 } & React.ComponentPropsWithRef<'button'>;
 
@@ -25,7 +21,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       disabled: buttonDisabled,
       isLoading,
       variant = 'primary',
-      isDarkBg = false,
       ...rest
     },
     ref
@@ -38,44 +33,25 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type='button'
         disabled={disabled}
         className={clsxm(
-          'inline-flex items-center rounded-md py-[15px] px-[32px] text-lg font-bold',
+          'inline-flex items-center rounded-md text-lg font-bold',
           'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
-          'shadow-sm',
-          'transition-colors duration-75',
+          'shadow-sm transition duration-300',
+          'active:bg-landing-dark-blue active:text-landing-cream-white',
+          'disabled:bg-landing-dark-grey disabled:text-landing-cream-white',
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
-              'bg-landing-dark-blue tracking-[-0.18px] text-landing-cream-white',
-              'border border-landing-dark-blue',
-              'hover:border hover:border-landing-dark-blue hover:bg-landing-cream-white hover:text-landing-dark-blue ',
-              'hover:tracking-[-0.16px] hover:text-landing-dark-blue',
+              'bg-landing-dark-blue py-[15px] px-[32px] tracking-[-0.18px] text-landing-cream-white',
+              'border-[0px] border-landing-dark-blue',
+              'hover:border-[0px] hover:border-landing-dark-blue hover:tracking-[-0.16px]',
               'active:bg-landing-dark-blue active:text-landing-cream-white',
-              'button-gradient disabled:bg-landing-dark-grey disabled:text-landing-cream-white',
+              'hover:bg-gradient-to-br hover:from-[#A060FF] hover:via-[#CB30E3] hover:to-[#FFA84E]',
             ],
-            variant === 'outline' && [
-              'bg-landing-cream-white tracking-[-0.16px] text-landing-dark-blue',
-              'border border-landing-dark-blue',
-              'hover:bg-primary-50 hover:tracking-[-0.18px] active:bg-primary-100 disabled:bg-primary-100',
-              isDarkBg &&
-                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
-            ],
-            variant === 'ghost' && [
-              'text-primary-500',
-              'shadow-none',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              isDarkBg &&
-                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
-            ],
-            variant === 'light' && [
-              'bg-white text-dark ',
-              'border border-gray-300',
-              'hover:bg-gray-100 hover:text-dark',
-              'active:bg-white/80 disabled:bg-gray-200',
-            ],
-            variant === 'dark' && [
-              'bg-gray-900 text-white',
-              'border border-gray-600',
-              'hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700',
+            variant === 'secondary' && [
+              'bg-transparent py-[12px] px-[23.5px] tracking-[-0.16px] text-landing-dark-blue',
+              'border-[1px] border-landing-dark-blue',
+              'hover:border-[1px] hover:bg-landing-dark-blue hover:tracking-[-0.18px]',
+              'hover:text-landing-cream-white',
             ],
           ],
           //#endregion  //*======== Variants ===========
