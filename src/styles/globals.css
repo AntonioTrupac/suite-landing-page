@@ -1,4 +1,6 @@
 @import 'components/button.scss';
+@import 'components/typography.scss';
+@import 'components/welcome.scss';
 
 @tailwind base;
 @tailwind components;
@@ -42,10 +44,6 @@
       U+2215, U+FEFF, U+FFFD;
   }
 
-  .cursor-newtab {
-    cursor: url('/images/new-tab.png') 10 10, pointer;
-  }
-
   /* #region  /**=========== Typography =========== */
   .h0 {
     @apply font-primary text-3xl font-bold md:text-5xl;
@@ -69,41 +67,6 @@
   h4,
   .h4 {
     @apply font-primary text-base font-bold md:text-lg;
-  }
-
-  .heading-xl-bold {
-    @apply text-7xl font-bold leading-[78px];
-    letter-spacing: -1px;
-  }
-
-  .heading-xl-regular {
-    @apply text-7xl font-normal leading-[78px];
-    letter-spacing: -1px;
-  }
-
-  .heading-l-bold {
-    @apply text-5xl font-bold leading-[56px];
-    letter-spacing: -0.5px;
-  }
-
-  .heading-l-regular {
-    @apply text-5xl font-normal leading-[56px];
-    letter-spacing: -0.5px;
-  }
-
-  .heading-m {
-    @apply text-lg font-bold leading-[32px];
-    letter-spacing: -0.18px;
-  }
-
-  .heading-s {
-    @apply text-base leading-[26px];
-    letter-spacing: -2.5px;
-  }
-
-  .quote {
-    @apply text-xl font-normal leading-[35px];
-    letter-spacing: 0;
   }
 
   body {

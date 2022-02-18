@@ -33,7 +33,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type='button'
         disabled={disabled}
         className={clsxm(
-          'inline-flex items-center rounded-md text-lg font-bold',
+          'inline-flex items-center rounded-md  font-bold',
           'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
           'shadow-sm transition duration-300',
           'active:bg-landing-dark-blue active:text-landing-cream-white',
@@ -41,14 +41,14 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
-              'bg-landing-dark-blue py-[15px] px-[32px] tracking-[-0.18px] text-landing-cream-white',
+              'bg-landing-dark-blue py-[15px] px-[32px] text-base tracking-[-0.18px] text-landing-cream-white',
               'border-[0px] border-landing-dark-blue',
               'hover:border-[0px] hover:border-landing-dark-blue hover:tracking-[-0.16px]',
               'active:bg-landing-dark-blue active:text-landing-cream-white',
               'hover:bg-gradient-to-br hover:from-[#A060FF] hover:via-[#CB30E3] hover:to-[#FFA84E]',
             ],
             variant === 'secondary' && [
-              'bg-transparent py-[12px] px-[23.5px] tracking-[-0.16px] text-landing-dark-blue',
+              'bg-transparent py-[12px] px-[23.5px] text-sm tracking-[-0.16px] text-landing-dark-blue md:text-base',
               'border-[1px] border-landing-dark-blue',
               'hover:border-[1px] hover:bg-landing-dark-blue hover:tracking-[-0.18px]',
               'hover:text-landing-cream-white',
